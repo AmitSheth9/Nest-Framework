@@ -10,9 +10,14 @@ https://selleo.com/blog/why-choose-nest-js-as-your-backend-framework </br>
 <ul>
   <li>NextJS is mainly Typescript</li>
   <li>NextJS uses TypeORM and optional Docker</li>
+  <li>NextJS deploy to Heroku w/TypeORM is very difficult and we were unsuccessful.</li>
+  <li>Express is a lot easier to deploy to Heroku</li>
+  <li>NestJS has a lot of dependencies to configure correctly</li>
+  <li>NestJS w/TypeORM has some helpful tools</li>
 </ul>
 What did you learn about ExpressJS and/or REST API servers in general from doing this assignment?</br>
 Changing Frameworks means going through a lot of documentation. </br>
+Express is very easy to use </br> 
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
