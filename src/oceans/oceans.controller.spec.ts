@@ -4,17 +4,24 @@ import { OceansService } from './oceans.service';
 
 describe('OceansController', () => {
   let controller: OceansController;
+  let service: OceansService;
 
   beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
+    const moduleRef = await Test.createTestingModule({
       controllers: [OceansController],
       providers: [OceansService],
     }).compile();
 
-    controller = module.get<OceansController>(OceansController);
+    service = moduleRef.get<OceansService>(OceansService);
+    controller = moduleRef.get<OceansController>(OceansController);
   });
 
-  it('should be defined', () => {
-    expect(controller).toBeDefined();
+  describe('findAll', () => {
+    it('should return an array of oceans', async () => {
+      const result = ['test'];
+      jest.spyOn(service, 'findAll').mockImplementation(() => result['']);
+
+      expect(await controller.findAll()).toBe(result);
+    });
   });
 });

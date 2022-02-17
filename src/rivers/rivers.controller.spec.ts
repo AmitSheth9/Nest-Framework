@@ -7,14 +7,14 @@ describe('RiversController', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      controllers: [RiversController],
       providers: [RiversService],
+      controllers: [RiversController],
     }).compile();
 
     controller = module.get<RiversController>(RiversController);
   });
 
-  it.skip('should be defined', () => {
+  it('should be defined', () => {
     expect(controller).toBeDefined();
   });
 });

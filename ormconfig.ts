@@ -1,5 +1,5 @@
-import { Ocean } from 'src/oceans/entities/ocean.entity';
-import { River } from 'src/rivers/entities/river.entity';
+import { Ocean } from './src/oceans/entities/ocean.entity';
+import { River } from './src/rivers/entities/river.entity';
 import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
 
 const config: PostgresConnectionOptions = {
