@@ -1,3 +1,22 @@
+Why did you choose this framework? What research or reviews did you read, or what on the website made you want to use that framework? </br>
+< p style="color:red";> We chose NestJS because we have seen it on job posts. We read & Watched: </br>
+https://docs.nestjs.com/ </br>
+https://selleo.com/blog/why-choose-nest-js-as-your-backend-framework </br>
+https://medium.com/@gausmann.simon/nestjs-typeorm-and-postgresql-full-example-development-and-project-setup-working-with-database-c1a2b1b11b8f </br>
+https://www.youtube.com/watch?v=sNosL578ECo </br>
+</br> </p>
+Compare and contrast to ExpressJS. Be opinionated, what did like/dislike?</br>
+< p style="color:blue";>
+https://selleo.com/blog/why-choose-nest-js-as-your-backend-framework </br>
+<ul>
+  <li>NextJS is mainly Typescript</li>
+  <li>NextJS uses TypeORM and optional Docker</li>
+</ul>
+</p>
+What did you learn about ExpressJS and/or REST API servers in general from doing this assignment?</br>
+< p style="color:yellow";>
+Changing Frameworks means going through a lot of documentation. 
+</p>
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
