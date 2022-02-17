@@ -5,23 +5,19 @@ import { OceansService } from './oceans.service';
 describe('OceansController', () => {
   let controller: OceansController;
   let service: OceansService;
+  let ocean = 'Pacific';
 
   beforeEach(async () => {
-    const moduleRef = await Test.createTestingModule({
-      controllers: [OceansController],
-      providers: [OceansService],
-    }).compile();
-
-    service = moduleRef.get<OceansService>(OceansService);
-    controller = moduleRef.get<OceansController>(OceansController);
+    service = new OceansService();
+    controller = new OceansController(service);
   });
 
   describe('findAll', () => {
     it('should return an array of oceans', async () => {
-      const result = ['test'];
-      jest.spyOn(service, 'findAll').mockImplementation(() => result['']);
+      const oceans = [1, 'Indian'];
+      jest.spyOn(service, 'findAll').mockImplementation(() => oceans);
 
-      expect(await controller.findAll()).toBe(result);
+      expect(await controller.findAll()).toEqual(oceans);
     });
   });
 });
