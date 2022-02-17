@@ -1,26 +1,30 @@
 import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 import { CreateOceanDto } from './dto/create-ocean.dto';
 import { UpdateOceanDto } from './dto/update-ocean.dto';
+import { Ocean } from './entities/ocean.entity';
 
 @Injectable()
 export class OceansService {
+  constructor(@InjectRepository(Ocean) private oceanRepo: Repository<Ocean>) {}
   create(createOceanDto: CreateOceanDto) {
-    return 'This action adds a new ocean';
+    return this.oceanRepo.save(createOceanDto);
   }
 
   findAll() {
-    return `This action returns all oceans`;
+    return this.oceanRepo.find();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} ocean`;
+    return this.oceanRepo.find({ id });
   }
 
   update(id: number, updateOceanDto: UpdateOceanDto) {
-    return `This action updates a #${id} ocean`;
+    return this.oceanRepo.update(id, updateOceanDto);
   }
 
   remove(id: number) {
-    return `This action removes a #${id} ocean`;
+    return this.oceanRepo.delete(id);
   }
 }

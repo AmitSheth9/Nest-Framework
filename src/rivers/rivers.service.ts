@@ -13,18 +13,18 @@ export class RiversService {
   }
 
   findAll() {
-    return `This action returns all rivers`;
+    return this.riverRepo.find();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} river`;
+    return this.riverRepo.find({ id });
   }
 
   update(id: number, updateRiverDto: UpdateRiverDto) {
-    return `This action updates a #${id} river`;
+    return this.riverRepo.update(id, updateRiverDto);
   }
 
   remove(id: number) {
-    return `This action removes a #${id} river`;
+    return this.riverRepo.delete(id);
   }
 }
