@@ -1,8 +1,15 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { RiversService } from './rivers.service';
 import { CreateRiverDto } from './dto/create-river.dto';
 import { UpdateRiverDto } from './dto/update-river.dto';
-
 
 @Controller('rivers')
 export class RiversController {
